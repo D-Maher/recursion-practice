@@ -11,4 +11,7 @@ def factorial_iterative(n)
 end
 
 def factorial_recursive(n)
+  return 1 if n == 0 # base case
+
+  n * factorial_recursive(n - 1)
 end
