@@ -15,3 +15,14 @@ def factorial_recursive(n)
 
   n * factorial_recursive(n - 1)
 end
+
+
+# BREAKDOWN:
+
+# given factorial_recursive(3)
+  # => 3 * factorial_recursive(2)
+    # => 3 * 2 * factorial_recursive(1)
+      # => 3 * 2 * 1 factorial_recursive(0)
+        #                  ^base case^
+
+  # => 3 * 2 * 1 * 1 = 6
