@@ -19,3 +19,29 @@ def recursive_nth_fibonacci_number(n)
 
   recursive_nth_fibonacci_number(n - 1) + recursive_nth_fibonacci_number(n - 2)
 end
+
+
+require 'benchmark'
+
+n = 40
+
+Benchmark.bm do |x|
+
+  start_time = Time.now
+
+  x.report("iterative:") { iterative_nth_fibonacci_number(n) }
+
+  end_time = Time.now
+
+  puts "It took #{end_time - start_time} seconds to iteratively calculate the #{n}th Fibonacci number."
+
+
+  start_time = Time.now
+
+  x.report("recursive:") { recursive_nth_fibonacci_number(n) }
+
+  end_time = Time.now
+
+  puts "It took #{end_time - start_time} seconds to recursively calculate the #{n}th Fibonacci number."
+
+end
