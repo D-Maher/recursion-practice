@@ -18,3 +18,15 @@ def recursive_reverse_string(string)
 
   string[-1] + recursive_reverse_string(string[0...-1])
 end
+
+
+# BREAKDOWN:
+
+# given recursive_reverse_string("hello")
+  # => "o" + recursive_reverse_string("hell")
+    # => "l" + recursive_reverse_string("hel")
+      # => "l" + recursive_reverse_string("he")
+        # =>  "e" + recursive_reverse_string("h")
+          # =>  "h" (the base case)
+
+# "o" + "l" + "l" + "e" + "h" => "olleh"
