@@ -12,3 +12,9 @@ def iterative_reverse_string(string)
 
   reverse_string
 end
+
+def recursive_reverse_string(string)
+  return string if string.length == 1
+
+  string[-1] + recursive_reverse_string(string[0...-1])
+end
