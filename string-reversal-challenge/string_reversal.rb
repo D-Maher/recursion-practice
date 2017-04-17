@@ -30,3 +30,31 @@ end
           # =>  "h" (the base case)
 
 # "o" + "l" + "l" + "e" + "h" => "olleh"
+
+
+require 'benchmark'
+
+test_string = "qwertyuiop" * 1000
+
+Benchmark.bm do |x|
+
+  start_time = Time.now
+
+  x.report("iterative:") { iterative_reverse_string(test_string) }
+
+  end_time = Time.now
+
+  puts "It took #{end_time - start_time} seconds to iteratively reverse the test_string of length #{test_string.length}."
+
+  puts "-" * 70
+
+
+  start_time = Time.now
+
+  x.report("recursive:") { recursive_reverse_string(test_string) }
+
+  end_time = Time.now
+
+  puts "It took #{end_time - start_time} seconds to recursively reverse the test_string of length #{test_string.length}."
+
+end
