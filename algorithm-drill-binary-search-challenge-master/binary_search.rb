@@ -1,5 +1,5 @@
 # Assumptions:
-  # This method assumes the input array is comprised of elements of the same data type, which are already sorted.
+  # This method assumes the input array is comprised of elements of the same data type, which are already sorted
 
 # Restrictions:
   # This method cannot use any fancy built-in Ruby array methods, only 'Array#[]' and 'Array#length'
