@@ -45,5 +45,4 @@ describe 'recursive binary_search' do
       expect(binary_search(array, 11)).to eq 10
     end
 
-
 end

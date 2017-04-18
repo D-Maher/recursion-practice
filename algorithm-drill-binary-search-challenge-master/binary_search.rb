@@ -1,3 +1,9 @@
+# Assumptions:
+  # This method assumes the input array is comprised of elements of the same data type, which are already sorted.
+
+# Restrictions:
+  # This method cannot use any fancy built-in Ruby array methods, only 'Array#[]' and 'Array#length'
+
 def binary_search(array, target, midpoint_index = array.length / 2)
   return nil if array.length <= 1 && array[0] != target
 
