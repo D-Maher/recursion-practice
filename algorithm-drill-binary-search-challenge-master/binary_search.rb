@@ -16,7 +16,7 @@ def binary_search(array, target, midpoint_index = array.length / 2)
     binary_search(left, target)
   elsif array[midpoint_index] < target
     if binary_search(right, target) == nil
-      return nil
+      nil
     else
       midpoint_index + binary_search(right, target)
     end
